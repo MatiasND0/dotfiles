@@ -1,0 +1,157 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 40,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "margin-bottom": 0,
+  "spacing": 4,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces",
+    "custom/workspace-add",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "image#album-art",
+    "custom/clock"
+  ],
+  "modules-right": [
+    "keyboard-state",
+    "custom/system",
+    "pulseaudio",
+    "network",
+    "bluetooth",
+    "battery",
+    "tray",
+    "custom/session"
+  ],
+  "custom/launcher": {
+    "format": "",
+    "tooltip-format": "Aplicaciones",
+    "on-click": "/home/hhouse/.local/bin/aplicaciones"
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "all-outputs": false,
+    "enable-bar-scroll": true,
+    "on-scroll-up": "hyprctl dispatch workspace m-1",
+    "on-scroll-down": "hyprctl dispatch workspace m+1",
+    "sort-by-number": true
+  },
+  "custom/workspace-add": {
+    "format": "+",
+    "tooltip-format": "Crear un escritorio nuevo",
+    "on-click": "sh -c 'next=$(hyprctl -j workspaces | jq -r \"map(select(.id > 0) | .id) | max + 1\"); hyprctl dispatch workspace \"$next\"'"
+  },
+  "hyprland/window": {
+    "max-length": 32,
+    "separate-outputs": true,
+    "icon": false,
+    "tooltip": false
+  },
+  "image#album-art": {
+    "exec": "/home/hhouse/.local/bin/waybar-media-art",
+    "size": 24,
+    "interval": 2,
+    "tooltip": true,
+    "on-click": "python3 $HOME/.config/waybar/panel.py media"
+  },
+  "custom/clock": {
+    "exec": "python3 $HOME/.config/waybar/panel.py clock-status",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "python3 $HOME/.config/waybar/panel.py calendar"
+  },
+  "custom/system": {
+    "format": "",
+    "tooltip-format": "CPU, RAM y brillo · clic: estadísticas · clic derecho: pantalla y energía",
+    "on-click": "python3 $HOME/.config/waybar/panel.py stats",
+    "on-click-right": "python3 $HOME/.config/waybar/panel.py power",
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "python3 $HOME/.config/waybar/panel.py brightness-down"
+  },
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": {
+      "numlock": "123 {icon}",
+      "capslock": "Aa {icon}"
+    },
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "  Silencio",
+    "format-bluetooth": "  {volume}%",
+    "format-bluetooth-muted": "  Silencio",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 2,
+    "max-volume": 100,
+    "tooltip-format": "{desc}\nClic: sonido · Clic derecho: silenciar · Rueda: volumen",
+    "on-click": "python3 $HOME/.config/waybar/panel.py audio",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-middle": "pavucontrol"
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "  Ethernet",
+    "format-disconnected": "  Sin red",
+    "format-linked": "  Conectando",
+    "max-length": 19,
+    "tooltip-format-wifi": "{essid} · Señal {signalStrength}%\n{ipaddr}\nClic: conexiones Wi-Fi y cableadas",
+    "tooltip-format-ethernet": "Ethernet · {ipaddr}\nClic: conexiones",
+    "tooltip-format-disconnected": "Sin conexión · Clic para elegir una red",
+    "on-click": "python3 $HOME/.config/waybar/panel.py network",
+    "on-click-right": "nm-connection-editor"
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "",
+    "format-off": "",
+    "format-connected": "  {num_connections}",
+    "tooltip-format": "Bluetooth · Clic para ver dispositivos",
+    "on-click": "python3 $HOME/.config/waybar/panel.py bluetooth"
+  },
+  "battery": {
+    "states": {
+      "warning": 25,
+      "critical": 12
+    },
+    "format": "{icon}  {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-full": "  {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "tooltip-format": "{capacity}% · {timeTo}\nClic: pantalla y energía",
+    "on-click": "python3 $HOME/.config/waybar/panel.py power"
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 9
+  },
+  "custom/session": {
+    "format": "",
+    "tooltip-format": "Bloquear, suspender o cerrar sesión",
+    "on-click": "python3 $HOME/.config/waybar/panel.py system"
+  }
+}

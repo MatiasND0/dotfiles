@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+import subprocess
+import urllib.request
+from pathlib import Path
+from urllib.parse import unquote
+
+cache = Path("/tmp/waybar-media-art")
+source = cache.with_suffix(".url")
+
+try:
+    art = subprocess.run(
+        ["playerctl", "metadata", "--format", "{{ mpris:artUrl }}"],
+        text=True, capture_output=True, check=True, timeout=2,
+    ).stdout.strip()
+except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
+    raise SystemExit
+
+if art.startswith("file://"):
+    path = unquote(art[7:])
+elif art.startswith(("http://", "https://")):
+    if source.read_text() != art if source.exists() else True:
+        temporary = cache.with_suffix(".new")
+        with urllib.request.urlopen(art, timeout=5) as response:
+            temporary.write_bytes(response.read())
+        temporary.replace(cache)
+        source.write_text(art)
+    path = str(cache)
+else:
+    raise SystemExit
+
+if Path(path).is_file():
+    print(path)

@@ -1,0 +1,85 @@
+@define-color accent #e7e7e7;
+@define-color foreground #ececec;
+@define-color muted #a1a1a1;
+@define-color surface #2c2c2c;
+@define-color border #3b3b3b;
+
+window#rose-controls {
+    background: transparent;
+    color: @foreground;
+    font-family: "Noto Sans", "FontAwesome", sans-serif;
+    font-size: 13px;
+}
+window#rose-controls .card {
+    background: #212121;
+    border: 1px solid @border;
+    border-radius: 18px;
+    padding: 19px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+window#rose-controls .title { font-size: 16px; font-weight: 700; color: @accent; }
+window#rose-controls .section { color: @muted; font-size: 12px; font-weight: 600; margin-top: 8px; }
+window#rose-controls .muted { color: @muted; font-size: 12px; }
+window#rose-controls .value { color: @foreground; font-weight: 600; }
+window#rose-controls .date-heading { font-size: 14px; font-weight: 600; padding: 4px 0 7px; }
+window#rose-controls .big-number { color: @accent; font-size: 38px; font-weight: 700; }
+window#rose-controls button {
+    background: @surface;
+    background-image: none;
+    color: @foreground;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 9px 12px;
+    min-height: 18px;
+}
+window#rose-controls button:hover { background: #393939; border-color: #616161; }
+window#rose-controls button:focus { border-color: @accent; }
+window#rose-controls .close { font-size: 22px; padding: 0 8px; background: transparent; color: @muted; }
+window#rose-controls .soft { color: @accent; background: #303030; font-size: 12px; }
+window#rose-controls .primary { background: @accent; color: #171717; font-weight: 700; }
+window#rose-controls .primary:hover { background: #ffffff; }
+window#rose-controls .primary label { color: #171717; }
+window#rose-controls .icon-button { min-width: 20px; color: @accent; font-size: 17px; }
+window#rose-controls .network-row { padding: 10px 11px; }
+window#rose-controls .connected { border-color: #626262; background: #303030; }
+window#rose-controls .action-row { padding: 11px 14px; }
+window#rose-controls .media-button { font-size: 16px; padding: 10px 0; }
+window#rose-controls .notice { padding: 10px; background: #303030; border-radius: 9px; font-size: 12px; }
+window#rose-controls .error { color: #e5aaaa; }
+window#rose-controls .password-box { padding: 11px; background: @surface; border-radius: 10px; }
+window#rose-controls entry {
+    background: #181818; color: @foreground; border: 1px solid @border;
+    border-radius: 8px; padding: 9px; box-shadow: none;
+}
+window#rose-controls entry:focus { border-color: @accent; }
+window#rose-controls combobox button { padding: 9px; }
+window#rose-controls scale { padding: 10px 0; }
+window#rose-controls scale trough { min-height: 6px; border-radius: 8px; background: #4a4a4a; }
+window#rose-controls scale highlight { border-radius: 8px; background: @accent; }
+window#rose-controls scale slider {
+    min-height: 15px; min-width: 15px; background: #eeeeee;
+    border: 0; border-radius: 50%; box-shadow: none;
+}
+window#rose-controls switch { border-radius: 14px; background: #464646; border: 0; }
+window#rose-controls switch:checked { background: @accent; }
+window#rose-controls switch slider {
+    min-width: 18px; min-height: 18px; border-radius: 50%; background: #ececec; border: 0;
+}
+window#rose-controls .month { font-weight: 700; font-size: 14px; }
+window#rose-controls .weekday { font-size: 11px; color: @muted; padding: 8px 0; }
+window#rose-controls .nav { font-size: 21px; padding: 2px 12px; }
+window#rose-controls .day { background: transparent; min-width: 24px; padding: 8px 3px; }
+window#rose-controls .day:hover { background: #393939; }
+window#rose-controls .weekend { color: @accent; }
+window#rose-controls .today { background: @accent; color: #171717; font-weight: 700; }
+window#rose-controls .today:hover { background: #ffffff; }
+window#rose-controls .today label { color: #171717; }
+window#rose-controls scrollbar { background: transparent; }
+window#rose-controls scrollbar slider { background: #626262; min-width: 4px; border-radius: 8px; }
+menu { background: #2c2c2c; color: #ececec; border: 1px solid #3b3b3b; padding: 5px; }
+menuitem { color: #ececec; padding: 8px 12px; }
+menuitem:hover { background: #393939; }
+
+window#rose-controls switch:checked slider { background: #242424; }

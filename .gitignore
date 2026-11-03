@@ -1,0 +1,7 @@
+# Backups and generated files kept outside the repository's active config.
+.config/hypr/*.bak-*
+.config/hypr/*.backup-*
+.config/waybar/*.bak-*
+.config/waybar/__pycache__/
+*.pyc
+
