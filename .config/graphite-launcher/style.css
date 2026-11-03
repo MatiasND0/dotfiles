@@ -1,0 +1,41 @@
+@define-color fg #ececec;
+@define-color muted #a1a1a1;
+@define-color border #383838;
+
+window#graphite-launcher { background: transparent; color: @fg; font-family: "Noto Sans", sans-serif; font-size: 13px; }
+#graphite-launcher .card { background: #212121; border: 1px solid #494949; border-radius: 18px; box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4); }
+#graphite-launcher .header { padding: 22px 24px 20px; border-bottom: 1px solid @border; }
+#graphite-launcher .title { font-size: 23px; font-weight: 700; letter-spacing: -0.5px; }
+#graphite-launcher .muted { color: @muted; font-size: 12px; }
+#graphite-launcher .keycap { color: #b9b9b9; background: #2b2b2b; border: 1px solid #414141; border-radius: 7px; padding: 5px 10px; }
+#graphite-launcher .sidebar { background: #1c1c1c; border-right: 1px solid @border; padding: 10px 12px 12px; }
+#graphite-launcher .section-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: #919191; margin: 15px 10px 8px; }
+#graphite-launcher .content { padding: 22px 22px 14px; }
+#graphite-launcher .section-title { font-size: 13px; font-weight: 600; }
+#graphite-launcher .footer { border-top: 1px solid @border; padding: 13px 24px; }
+#graphite-launcher button { background: transparent; background-image: none; color: @fg; border: 1px solid transparent; border-radius: 9px; box-shadow: none; text-shadow: none; padding: 8px 10px; min-height: 20px; }
+#graphite-launcher button:hover { background: #333333; }
+#graphite-launcher button:focus { border-color: #a1a1a1; }
+#graphite-launcher .category { padding: 8px 10px; font-size: 12px; }
+#graphite-launcher .category image { color: #a1a1a1; }
+#graphite-launcher .category.active { background: #393939; color: #ffffff; }
+#graphite-launcher .category.active image { color: #eeeeee; }
+#graphite-launcher .favorite { padding: 6px 10px; }
+#graphite-launcher .close { font-size: 25px; color: @muted; padding: 0 10px; }
+#graphite-launcher entry { background: #191919; color: @fg; border: 1px solid #444444; border-radius: 11px; padding: 12px 14px; box-shadow: none; font-size: 14px; }
+#graphite-launcher entry:focus { border-color: #b5b5b5; }
+#graphite-launcher entry image { color: #a1a1a1; }
+#graphite-launcher list { background: transparent; }
+#graphite-launcher row { background: transparent; color: @fg; border: 1px solid transparent; border-radius: 11px; padding: 0; margin-bottom: 4px; }
+#graphite-launcher row:selected { background: #303030; border-color: #494949; }
+#graphite-launcher row:hover { background: #2c2c2c; }
+#graphite-launcher row:selected:hover { background: #363636; }
+#graphite-launcher .app-launch { padding: 10px 12px; }
+#graphite-launcher .app-launch:hover { background: transparent; }
+#graphite-launcher .app-name { font-weight: 600; font-size: 14px; }
+#graphite-launcher .star { color: #858585; font-size: 23px; padding: 3px 10px; margin: 8px 6px; }
+#graphite-launcher .star.saved, #graphite-launcher .star:hover { color: #eeeeee; }
+#graphite-launcher .empty-title { font-size: 16px; font-weight: 600; }
+#graphite-launcher .error { color: #e6adad; background: #382929; padding: 10px; border-radius: 8px; }
+#graphite-launcher scrollbar { background: transparent; }
+#graphite-launcher scrollbar slider { background: #595959; min-width: 4px; border-radius: 8px; }

@@ -1,0 +1,40 @@
+add_newline = false
+
+format = "$username$hostname $directory$git_branch$git_status$character"
+
+[git_branch]
+symbol = "git "
+format = "[$symbol$branch](bold #ff9e64) "
+
+[git_status]
+format = "([$all_status$ahead_behind](#ff9e64) )"
+modified = "!"
+staged = "+"
+untracked = "?"
+deleted = "x"
+
+[character]
+success_symbol = "[❯](bold #bb9af7)"
+error_symbol = "[❯](bold #f7768e)"
+
+[cmd_duration]
+disabled = true
+
+[package]
+disabled = true
+
+[username]
+show_always = true
+style_user = "bold #9ece6a"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "bold #b4a7d6"
+format = "[@$hostname]($style)"
+
+[directory]
+format = "[$path](bold #bb9af7) "
+truncation_length = 3
+truncate_to_repo = false
+home_symbol = "~"

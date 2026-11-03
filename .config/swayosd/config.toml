@@ -1,0 +1,7 @@
+[server]
+# Centro inferior de cada pantalla, con el estilo grafito del escritorio.
+top_margin = 0.90
+max_volume = 100
+show_percentage = true
+
+[client]

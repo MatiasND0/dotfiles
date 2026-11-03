@@ -1,0 +1,90 @@
+@define-color cc-bg #212121;
+@define-color noti-bg #212121;
+@define-color noti-bg-opaque #212121;
+@define-color noti-bg-hover #2c2c2c;
+@define-color noti-bg-hover-opaque #2c2c2c;
+@define-color noti-border-color #3b3b3b;
+@define-color text-color #ececec;
+@define-color text-color-disabled #a1a1a1;
+
+/* Grafito, a juego con Waybar. El botón de cierre aparece al pasar el mouse. */
+* {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 13px;
+}
+
+.notification-row {
+    outline: none;
+}
+
+.notification-row .notification-background .notification {
+    background: #212121;
+    color: #ececec;
+    border: 1px solid #3b3b3b;
+    border-bottom: 3px solid #626262;
+    border-radius: 14px;
+    margin: 8px 12px;
+    box-shadow: none;
+}
+
+.notification-row .notification-background .notification .notification-default-action {
+    padding: 14px 16px;
+    border-radius: 14px;
+}
+
+.notification-row .notification-background .notification .notification-default-action:hover,
+.notification-row .notification-background .notification .notification-action:hover {
+    background: #2c2c2c;
+}
+
+.notification-row .notification-background .notification .summary {
+    color: #ececec;
+    font-weight: bold;
+}
+
+.notification-row .notification-background .notification .body,
+.notification-row .notification-background .notification .time {
+    color: #a1a1a1;
+}
+
+.notification-row .notification-background .notification.critical {
+    background: #2b2222;
+    border-color: #705050;
+}
+
+.notification-row .notification-background .notification.critical .summary {
+    color: #e5aaaa;
+}
+
+.notification-row .notification-background .notification .notification-action {
+    color: #ececec;
+    background: #303030;
+    border-color: #3b3b3b;
+}
+
+.notification-row .notification-background .close-button {
+    color: #ececec;
+    background: #303030;
+    background-image: none;
+    border: 1px solid #616161;
+    border-radius: 15px;
+    min-width: 26px;
+    min-height: 26px;
+    padding: 0;
+    margin: 6px;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.notification-row .notification-background .close-button:hover {
+    color: #171717;
+    background: #e5aaaa;
+    border-color: #e5aaaa;
+}
+
+.control-center {
+    color: #ececec;
+    background: #212121;
+    border: 1px solid #3b3b3b;
+    border-radius: 14px;
+}

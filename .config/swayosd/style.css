@@ -1,0 +1,62 @@
+window#osd {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    color: #ececec;
+    background: transparent;
+    border: none;
+    border-radius: 18px;
+    padding: 0;
+    box-shadow: none;
+}
+
+window#osd #container {
+    margin: 0;
+    padding: 16px 22px;
+    background: #212121;
+    border: 1px solid #464646;
+    border-radius: 18px;
+}
+
+window#osd image {
+    color: #ececec;
+    min-width: 24px;
+    min-height: 24px;
+    -gtk-icon-size: 24px;
+}
+
+window#osd label {
+    color: #ececec;
+    min-width: 48px;
+    font-weight: 600;
+    font-feature-settings: "tnum";
+}
+
+window#osd progressbar {
+    min-width: 220px;
+    min-height: 8px;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+window#osd trough {
+    min-height: 8px;
+    border-radius: 999px;
+    border: none;
+    background: #494949;
+}
+
+window#osd progress {
+    min-width: 0;
+    min-height: 8px;
+    padding: 0;
+    border-radius: 999px;
+    border: none;
+    background: #e2e2e2;
+    transition: 120ms ease-out;
+}
+
+window#osd progressbar:disabled,
+window#osd image:disabled {
+    opacity: 0.45;
+}

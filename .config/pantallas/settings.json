@@ -1,0 +1,14 @@
+{
+  "mode": "extend",
+  "side": "left",
+  "outputs": {
+    "eDP-1": {
+      "mode": "1920x1200@60.003",
+      "scale": 1.0
+    },
+    "DP-2": {
+      "mode": "1920x1080@60",
+      "scale": 1.0
+    }
+  }
+}

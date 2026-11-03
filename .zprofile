@@ -1,0 +1,1 @@
+export PATH="/home/hhouse/.local/stm32cube/bin:$PATH"

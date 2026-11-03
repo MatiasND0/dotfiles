@@ -1,0 +1,95 @@
+@define-color foreground #ececec;
+@define-color muted #a1a1a1;
+@define-color border #3b3b3b;
+
+window#graphite-clipboard {
+    background: transparent;
+    color: @foreground;
+    font-family: "Noto Sans", "FontAwesome", sans-serif;
+    font-size: 13px;
+}
+#graphite-clipboard .panel {
+    background: #212121;
+    border: 1px solid @border;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.30);
+}
+#graphite-clipboard .title { font-size: 18px; font-weight: 700; color: #ececec; }
+#graphite-clipboard .clipboard-icon { font-size: 20px; font-family: "FontAwesome"; color: #d0d0d0; }
+#graphite-clipboard .muted { font-size: 12px; color: @muted; }
+#graphite-clipboard .shortcut {
+    color: #c8c8c8;
+    background: #2c2c2c;
+    border: 1px solid @border;
+    border-radius: 7px;
+    padding: 5px 8px;
+    font-size: 11px;
+}
+#graphite-clipboard button {
+    color: @foreground;
+    background: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 5px 9px;
+    min-height: 18px;
+    min-width: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+#graphite-clipboard button:hover { background: #3a3a3a; }
+#graphite-clipboard button:focus { border-color: #808080; }
+#graphite-clipboard button.close { color: @muted; font-size: 22px; padding: 0 5px; }
+#graphite-clipboard button.tab { color: @muted; padding: 7px 11px; }
+#graphite-clipboard button.tab.active {
+    color: #f5f5f5;
+    background: #343434;
+    border-color: #4b4b4b;
+    font-weight: 600;
+}
+#graphite-clipboard button.clear { color: @muted; font-size: 12px; }
+#graphite-clipboard button:disabled { color: #656565; }
+#graphite-clipboard entry {
+    color: @foreground;
+    background: #181818;
+    border: 1px solid @border;
+    border-radius: 10px;
+    padding: 10px 11px;
+    min-height: 20px;
+    box-shadow: none;
+    caret-color: @foreground;
+}
+#graphite-clipboard entry:focus { border-color: #808080; }
+#graphite-clipboard entry image { color: @muted; }
+#graphite-clipboard entry selection { background: #585858; color: #fff; }
+#graphite-clipboard list { background: transparent; padding-right: 3px; }
+#graphite-clipboard row.clip {
+    color: @foreground;
+    background: #2a2a2a;
+    border: 1px solid #383838;
+    border-radius: 12px;
+    padding: 11px 13px 13px;
+    margin: 0 0 9px;
+    outline: none;
+}
+#graphite-clipboard row.clip:hover { background: #303030; border-color: #626262; }
+#graphite-clipboard row.clip:selected { background: #303030; border-color: #808080; }
+#graphite-clipboard .item-meta { color: @muted; font-size: 11px; }
+#graphite-clipboard .preview-text { color: #ececec; font-size: 13px; }
+#graphite-clipboard .preview-image { background: #1a1a1a; border-radius: 7px; padding: 4px; }
+#graphite-clipboard button.pin { font-family: "FontAwesome"; font-size: 12px; color: #898989; padding: 2px 7px; }
+#graphite-clipboard button.is-pinned { color: #ececec; background: #444444; }
+#graphite-clipboard button.delete { color: #898989; font-size: 19px; padding: 0 6px; }
+#graphite-clipboard button.delete:hover { color: #e5aaaa; background: #423333; }
+#graphite-clipboard .empty { padding: 22px 0; }
+#graphite-clipboard .empty-icon { font-family: "FontAwesome"; color: #626262; font-size: 44px; margin-bottom: 8px; }
+#graphite-clipboard .empty-title { font-size: 14px; font-weight: 600; color: #d0d0d0; }
+#graphite-clipboard .footer { color: #a1a1a1; font-size: 11px; }
+#graphite-clipboard .keys { color: #808080; font-size: 10px; }
+#graphite-clipboard .notice { color: #e5aaaa; background: #332929; padding: 9px; border-radius: 8px; font-size: 12px; }
+#graphite-clipboard scrollbar { background: transparent; }
+#graphite-clipboard scrollbar trough { background: transparent; }
+#graphite-clipboard scrollbar slider { background: #626262; min-width: 4px; border-radius: 8px; }
+tooltip { background: #212121; color: #ececec; border: 1px solid #3b3b3b; border-radius: 8px; }
+tooltip label { color: #ececec; padding: 5px; }
